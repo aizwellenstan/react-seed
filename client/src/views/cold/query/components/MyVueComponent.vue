@@ -26,8 +26,8 @@
 </template>
 
 <script>
-// const railsApi = 'https://product.nadi3docms.com/api';
-const railsApi = 'railsapi';
+const railsApi = 'https://product.nadi3docms.com/api';
+// const railsApi = 'railsapi';
 const CompanyId = localStorage.getItem('CompanyId');
 const ProductId = localStorage.getItem('ProductId');
 const ProjectId = localStorage.getItem('ProjectId');

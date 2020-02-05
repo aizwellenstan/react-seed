@@ -26,7 +26,8 @@ export class Login extends React.Component<{}, MyState> {
   }
 
   private doLogin = () => {
-    const uri = 'railsapi';
+    // const uri = 'railsapi';
+    const uri = 'https://product.nadi3docms.com/api'
     const userName = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     if (userName !== '' && password !== '') {

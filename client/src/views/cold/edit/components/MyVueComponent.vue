@@ -371,8 +371,8 @@
 </template>
 
 <script>
-// const railsApi = 'https://product.nadi3docms.com/api';
-const railsApi = 'railsapi';
+const railsApi = 'https://product.nadi3docms.com/api';
+// const railsApi = 'railsapi';
 // import Joi from 'joi'
 
 const CompanyId = localStorage.getItem('CompanyId');

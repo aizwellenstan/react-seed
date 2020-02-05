@@ -319,8 +319,8 @@
 </template>
 
 <script>
-// const alarmApi = 'https://product.nadi3docms.com/Siemens';
-const alarmApi = 'alarmapi';
+const alarmApi = 'https://product.nadi3docms.com/Siemens';
+// const alarmApi = 'alarmapi';
 const QUERY_URL = alarmApi+'/alarmInfo/'
 
 export default {
