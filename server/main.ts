@@ -5,7 +5,7 @@ import { APP_PORT } from './config';
 import console = require('console');
 import { routes } from './routes';
 import * as path from 'path';
-// import { dataSources } from './datasources';
+import { dataSources } from './datasources';
 
 (async () => {
   const staticDir = path.resolve(__dirname, '../static');
@@ -16,7 +16,7 @@ import * as path from 'path';
     .use(cors())
     .use('/static', express.static(staticDir))
     .use(express.static(publicDir))
-    // .use(dataSources)
+    .use(dataSources)
     .use(routes);
 
   app.listen(process.env.PORT || { port: APP_PORT }, () => {
