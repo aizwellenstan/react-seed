@@ -54,7 +54,6 @@ const config = (isProd, isDevServer) => ({
           },
         ],
       },
-
       {
         test: /\.vue$/, //new!
         loader: "vue-loader"  //new!

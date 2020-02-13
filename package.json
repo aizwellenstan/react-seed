@@ -113,7 +113,9 @@
     "vuera": "*",
     "xlsx": "*",
     "vue-scrolling-table": "*",
-    "html-loader": "*"
+    "html-loader": "*",
+    "node-fetch": "*",
+    "@types/node-fetch": "*"
   },
   "devDependencies": {
     "@redux-saga/testing-utils": "^1.0.2",

@@ -25,7 +25,8 @@ import { UpdateHot } from 'client/src/views/hot/update';
 import { QueryHot } from 'client/src/views/hot/query';
 import { DeleteHot } from 'client/src/views/hot/delete';
 import { Schedule } from 'client/src/views/schedule';
-import { Assets } from 'client/src/views/assets';
+import { Assets } from 'client/src/views/assets/index';
+import { NewAssets } from 'client/src/views/assets/new';
 import { EquipList } from 'client/src/views/equipment/equiplist';
 import { ViewEquipList } from 'client/src/views/equipment/viewequiplist';
 import { EditEquipList } from 'client/src/views/equipment/editequiplist';
@@ -80,6 +81,7 @@ export const Root: React.SFC = React.memo(() => {
               <Route path="/deletehot" component={DeleteHot} />
               <Route path="/schedule" component={Schedule} />
               <Route path="/asset" component={Assets} />
+              <Route path="/newasset" component={NewAssets} />
               <Route path="/equiplist" component={EquipList} />
               <Route path="/viewequiplist" component={ViewEquipList} />
               <Route path="/editequiplist" component={EditEquipList} />
