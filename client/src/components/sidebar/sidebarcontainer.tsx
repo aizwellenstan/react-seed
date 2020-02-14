@@ -55,7 +55,7 @@ function SidebarItem({ depthStep = 10, depth = 0, item, ...rest }) {
         >
           {Icon && <Icon className="sidebar-item-icon" fontSize="small" />}
           <div className="sidebar-item-text">
-            {t(`banner.${name}`, {
+            {t(`sidebar.${name}`, {
               defaultValue: label,
             })}
           </div>

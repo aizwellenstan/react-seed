@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { styled } from 'client/src/styles';
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons';
 // import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -106,7 +106,7 @@ const handleLogout = () => {
 };
 
 export const Banner = React.memo(() => {
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
   if (localStorage.getItem('login') == 'true') {
     return (
       <Wrapper>
@@ -158,7 +158,11 @@ export const Banner = React.memo(() => {
               }}
               style={{ textDecoration: 'none' }}
             >
-              <span style={{ color: 'white' }}>ログアウト</span>
+              <span style={{ color: 'white' }}>
+                {t(`banner.logout`, {
+                  defaultValue: 'ログアウト',
+                })}
+              </span>
             </Link>
           </OriginalLink>
         </Toolbox>
@@ -214,7 +218,11 @@ export const Banner = React.memo(() => {
             }}
             style={{ textDecoration: 'none' }}
           >
-            <span style={{ color: 'white' }}>ログイン</span>
+            <span style={{ color: 'white' }}>
+              {t(`banner.login`, {
+                defaultValue: 'ログイン',
+              })}
+            </span>
           </Link>
         </OriginalLink>
       </Toolbox>
