@@ -65,9 +65,6 @@ switch (pageNow) {
   case 'Login':
     Main = Login;
     break;
-  case 'Admin':
-    Main = Home;
-    break;
   case 'AlarmList':
     Main = AlarmList;
     break;
@@ -76,6 +73,9 @@ switch (pageNow) {
     break;
   case 'AlarmSetting':
     Main = AlarmSetting;
+    break;
+  case 'Assets':
+    Main = Assets;
     break;
   case 'CreateCold':
     Main = CreateCold;
@@ -94,9 +94,6 @@ switch (pageNow) {
     break;
   case 'Schedule':
     Main = Schedule;
-    break;
-  case 'Assets':
-    Main = Assets;
     break;
   case 'NewAssets':
     Main = NewAssets;

@@ -112,7 +112,7 @@ export const Banner = React.memo(() => {
       <Wrapper>
         <Hgroup>
           <Link to="/">
-            <Title>itsukara</Title>
+            <Title>OCMS</Title>
             {/* <LogoLarge src={logoLarge} alt="itsukara" /> */}
             {/* <LogoLarge src={logoSmall} alt="itsukara" />
             <LogoSmall src={logoSmall} alt="itsukara" /> */}
@@ -169,7 +169,7 @@ export const Banner = React.memo(() => {
     <Wrapper>
       <Hgroup>
         <Link to="/">
-          <Title>itsukara</Title>
+          <Title>OCMS</Title>
           {/* <LogoLarge src={logoLarge} alt="itsukara" /> */}
           {/* <LogoLarge src={logoSmall} alt="itsukara" />
             <LogoSmall src={logoSmall} alt="itsukara" /> */}

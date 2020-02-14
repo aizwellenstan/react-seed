@@ -7,7 +7,30 @@
   "sidebar": {
     "no_streaming": "There's no streaming on air",
     "title": "<0>{{count}}</0> streaming is on air",
-    "title_plural": "<0>{{count}}</0> streamings are on air"
+    "title_plural": "<0>{{count}}</0> streamings are on air",
+    "managealarm": "Manage Alarm",
+    "AlarmlList": "Alarm List",
+    "AlarmHistory": "Alarm History",
+    "AlarmSetting": "Alarm Setting",
+    "pointcontrol": "Point Control",
+    "colddata": "Cold Data",
+    "CreateCold": "Create",
+    "UpdateCold": "Update",
+    "QueryCold": "Query",
+    "DeleteCold": "Delete",
+    "Schedule": "Schedule",
+    "Assets": "Manage Asset",
+    "ManageEquip": "Manage Equipment",
+    "EquipList": "Equipment List",
+    "Maintance": "Maintaince Record",
+    "Notification": "Notification",
+    "Report": "Report",
+    "manageaccount": "Manage Account",
+    "CreateAccount": "Create",
+    "UpdateAccount": "Update",
+    "QueryaAcount": "Query",
+    "DeleteAccount": "Delete",
+    "Settings": "Settings"
   },
   "timeline": {
     "now": "LIVE"

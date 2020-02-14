@@ -121,7 +121,7 @@ export const Sidebar = () => {
   const items = [
     // { name: 'home', label: 'Home', Icon: HomeIcon },
     {
-      name: 'alarmlist',
+      name: 'managealarm',
       label: 'Manage Alarm',
       Icon: NotificationsIcon,
       items: [
@@ -132,12 +132,12 @@ export const Sidebar = () => {
     },
     'divider',
     {
-      name: 'createcold',
+      name: 'pointcontrol',
       label: 'Point Control',
       Icon: StorageIcon,
       items: [
         {
-          name: 'createcold',
+          name: 'colddata',
           label: 'Cold Data',
           items: [
             { name: 'CreateCold', label: 'Create', onClick },
@@ -168,7 +168,7 @@ export const Sidebar = () => {
     },
     'divider',
     {
-      name: 'equiplist',
+      name: 'ManageEquip',
       label: 'Manage Equipment',
       Icon: WebAssetIcon,
       items: [
@@ -180,7 +180,7 @@ export const Sidebar = () => {
     },
     'divider',
     {
-      name: 'createaccount',
+      name: 'manageaccount',
       label: 'Manage Account',
       Icon: SupervisorAccountIcon,
       items: [

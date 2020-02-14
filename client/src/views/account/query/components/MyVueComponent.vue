@@ -37,8 +37,8 @@
 </template>
 
 <script>
-// const railsApi = 'https://product.nadi3docms.com/api';
-const railsApi = 'railsapi';
+const railsApi = 'https://product.nadi3docms.com/api';
+// const railsApi = 'railsapi';
 const QUERY_URL = railsApi + '/user/search';
 const CompanyId = localStorage.getItem('CompanyId');
 const ProductId = localStorage.getItem('ProductId');
