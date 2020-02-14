@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { SidebarContainer } from 'client/src/containers/sidebar-container';
-import { Redirect } from 'react-router-dom';
 import { Page } from 'client/src/components/page';
 import { styled } from 'client/src/styles';
 import { sidebarWidth } from 'client/src/styles/constants';
@@ -25,7 +24,8 @@ export const Report = React.memo(() => {
   `;
 
   if (localStorage.getItem('login') !== 'true') {
-    return <Redirect exact from="/admin" to="/login" />;
+    localStorage.setItem('pageNow', 'Login');
+    window.location.reload();
   }
   return (
     <Page>

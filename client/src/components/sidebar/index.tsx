@@ -114,8 +114,7 @@ export const Sidebar = () => {
   ]);
 
   function onClick(e: Error, item: any) {
-    // window.alert(JSON.stringify(item, null, 2));
-    window.history.replaceState(null, '', item.name);
+    localStorage.setItem('pageNow', item.name);
     window.location.reload();
   }
 
@@ -126,9 +125,9 @@ export const Sidebar = () => {
       label: 'Manage Alarm',
       Icon: NotificationsIcon,
       items: [
-        { name: 'alarmlist', label: 'Alarm List', onClick },
-        { name: 'alarmhistory', label: 'Alarm History', onClick },
-        { name: 'alarmsetting', label: 'Alarm Setting', onClick },
+        { name: 'AlarmList', label: 'Alarm List', onClick },
+        { name: 'AlarmHistory', label: 'Alarm History', onClick },
+        { name: 'AlarmSetting', label: 'Alarm Setting', onClick },
       ],
     },
     'divider',
@@ -141,28 +140,28 @@ export const Sidebar = () => {
           name: 'createcold',
           label: 'Cold Data',
           items: [
-            { name: 'createcold', label: 'Create', onClick },
-            { name: 'updatecold', label: 'Update', onClick },
-            { name: 'querycold', label: 'Query', onClick },
-            { name: 'deletecold', label: 'Delete', onClick },
+            { name: 'CreateCold', label: 'Create', onClick },
+            { name: 'UpdateCold', label: 'Update', onClick },
+            { name: 'QueryCold', label: 'Query', onClick },
+            { name: 'DeleteCold', label: 'Delete', onClick },
           ],
         },
-        {
-          name: 'createhot',
-          label: 'Hot Data',
-          items: [
-            { name: 'createhot', label: 'Create', onClick },
-            { name: 'updatehot', label: 'Update', onClick },
-            { name: 'queryhot', label: 'Query', onClick },
-            { name: 'deletehot', label: 'Delete', onClick },
-          ],
-        },
-        { name: 'schedule', label: 'Schedule', onClick },
+        // {
+        //   name: 'createhot',
+        //   label: 'Hot Data',
+        //   items: [
+        //     { name: 'CreateHot', label: 'Create', onClick },
+        //     { name: 'updatehot', label: 'Update', onClick },
+        //     { name: 'queryhot', label: 'Query', onClick },
+        //     { name: 'deletehot', label: 'Delete', onClick },
+        //   ],
+        // },
+        { name: 'Schedule', label: 'Schedule', onClick },
       ],
     },
     'divider',
     {
-      name: 'asset',
+      name: 'Assets',
       label: 'Manage Asset',
       Icon: WebAssetIcon,
       onClick,
@@ -173,10 +172,10 @@ export const Sidebar = () => {
       label: 'Manage Equipment',
       Icon: WebAssetIcon,
       items: [
-        { name: 'equiplist', label: 'Equipment List', onClick },
-        { name: 'maintance', label: 'Maintaince Record', onClick },
-        { name: 'notification', label: 'Notification', onClick },
-        { name: 'report', label: 'Report', onClick },
+        { name: 'EquipList', label: 'Equipment List', onClick },
+        { name: 'Maintance', label: 'Maintaince Record', onClick },
+        { name: 'Notification', label: 'Notification', onClick },
+        { name: 'Report', label: 'Report', onClick },
       ],
     },
     'divider',
@@ -185,15 +184,15 @@ export const Sidebar = () => {
       label: 'Manage Account',
       Icon: SupervisorAccountIcon,
       items: [
-        { name: 'createaccount', label: 'Create', onClick },
-        { name: 'updateaccount', label: 'Update', onClick },
-        { name: 'queryaccount', label: 'Query', onClick },
-        { name: 'deleteaccount', label: 'Delete', onClick },
+        { name: 'CreateAccount', label: 'Create', onClick },
+        { name: 'UpdateAccount', label: 'Update', onClick },
+        { name: 'QueryAccount', label: 'Query', onClick },
+        { name: 'DeleteAccount', label: 'Delete', onClick },
       ],
     },
     'divider',
     {
-      name: 'settings',
+      name: 'Settings',
       label: 'Settings',
       Icon: SettingsIcon,
       onClick,

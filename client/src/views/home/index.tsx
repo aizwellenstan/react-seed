@@ -1,7 +1,6 @@
 import * as React from 'react';
 // import { TimetableContainer } from 'client/src/containers/timetable-container';
 // import { SidebarContainer } from 'client/src/containers/sidebar-container';
-import { Redirect } from 'react-router-dom';
 import { Page } from 'client/src/components/page';
 import { Helmet } from 'react-helmet';
 import { styled } from 'client/src/styles';
@@ -21,7 +20,8 @@ export const Home = React.memo(() => {
   `;
 
   if (localStorage.getItem('login') == 'true') {
-    return <Redirect exact from="/" to="/admin" />;
+    localStorage.setItem('pageNow', 'CreateCold');
+    window.location.reload();
   }
   return (
     <>

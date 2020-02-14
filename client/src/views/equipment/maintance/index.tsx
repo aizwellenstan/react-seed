@@ -4,7 +4,6 @@ import { Page } from 'client/src/components/page';
 
 import { styled } from 'client/src/styles';
 import { sidebarWidth } from 'client/src/styles/constants';
-import { Redirect, Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -85,8 +84,13 @@ export class Maintance extends React.Component<{}, MyState> {
 
   public render() {
     if (localStorage.getItem('login') !== 'true') {
-      return <Redirect exact from="/admin" to="/login" />;
+      localStorage.setItem('pageNow', 'Login');
+      window.location.reload();
     }
+    const handleClick = () => {
+      localStorage.setItem('pageNow', 'Maintance');
+      window.location.reload();
+    };
     return (
       <Page>
         <SidebarContainer />
@@ -115,11 +119,12 @@ export class Maintance extends React.Component<{}, MyState> {
                           <td>{i.Name}</td>
                           <td>{i.Type}</td>
                           <td>
-                            <Link to="/viewmaintance">
-                              <button className="btn btn-success">
-                                保養紀錄
-                              </button>
-                            </Link>
+                            <button
+                              onClick={handleClick}
+                              className="btn btn-success"
+                            >
+                              保養紀錄
+                            </button>
                           </td>
                         </tr>
                       ))}

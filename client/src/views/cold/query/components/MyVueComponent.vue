@@ -31,7 +31,7 @@ const railsApi = 'https://product.nadi3docms.com/api';
 const CompanyId = localStorage.getItem('CompanyId');
 const ProductId = localStorage.getItem('ProductId');
 const ProjectId = localStorage.getItem('ProjectId');
-const QUERY_URL = `/${railsApi}/${CompanyId}/${ProductId}/${ProjectId}/colddata`;
+const QUERY_URL = railsApi + `/${CompanyId}/${ProductId}/${ProjectId}/colddata`;
 export default {
   data() {
     return {

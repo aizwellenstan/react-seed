@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { ThemeProvider, styled } from 'client/src/styles';
 import { I18nextProvider } from 'react-i18next';
-import { Switch, Redirect, Route } from 'react-router-dom';
 import { getLocale } from 'client/src/locales';
 import { theme } from 'client/src/styles/theme';
 import { Banner } from 'client/src/components/banner';
@@ -10,7 +9,6 @@ import { GlobalStyle } from './global-style';
 // import { Events } from 'client/src/views/events';
 import { Home } from 'client/src/views/home';
 import { Login } from 'client/src/views/login';
-import { Admin } from 'client/src/views/admin';
 
 import { AlarmList } from 'client/src/views/alarm/list';
 import { AlarmHistory } from 'client/src/views/alarm/history';
@@ -20,10 +18,10 @@ import { UpdateCold } from 'client/src/views/cold/update';
 import { EditCold } from 'client/src/views/cold/edit';
 import { QueryCold } from 'client/src/views/cold/query';
 import { DeleteCold } from 'client/src/views/cold/delete';
-import { CreateHot } from 'client/src/views/hot/create';
-import { UpdateHot } from 'client/src/views/hot/update';
-import { QueryHot } from 'client/src/views/hot/query';
-import { DeleteHot } from 'client/src/views/hot/delete';
+// import { CreateHot } from 'client/src/views/hot/create';
+// import { UpdateHot } from 'client/src/views/hot/update';
+// import { QueryHot } from 'client/src/views/hot/query';
+// import { DeleteHot } from 'client/src/views/hot/delete';
 import { Schedule } from 'client/src/views/schedule';
 import { Assets } from 'client/src/views/assets/index';
 import { NewAssets } from 'client/src/views/assets/new';
@@ -53,6 +51,99 @@ const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.backgroundNormal};
 `;
 
+var pageNow = 'Home';
+
+if (localStorage.getItem('pageNow')) {
+  pageNow = localStorage.getItem('pageNow').toString();
+}
+
+var Main = Home;
+switch (pageNow) {
+  case 'Home':
+    Main = Home;
+    break;
+  case 'Login':
+    Main = Login;
+    break;
+  case 'Admin':
+    Main = Home;
+    break;
+  case 'AlarmList':
+    Main = AlarmList;
+    break;
+  case 'AlarmHistory':
+    Main = AlarmHistory;
+    break;
+  case 'AlarmSetting':
+    Main = AlarmSetting;
+    break;
+  case 'CreateCold':
+    Main = CreateCold;
+    break;
+  case 'UpdateCold':
+    Main = UpdateCold;
+    break;
+  case 'EditCold':
+    Main = EditCold;
+    break;
+  case 'QueryCold':
+    Main = QueryCold;
+    break;
+  case 'DeleteCold':
+    Main = DeleteCold;
+    break;
+  case 'Schedule':
+    Main = Schedule;
+    break;
+  case 'Assets':
+    Main = Assets;
+    break;
+  case 'NewAssets':
+    Main = NewAssets;
+    break;
+  case 'EquipList':
+    Main = EquipList;
+    break;
+  case 'ViewEquipList':
+    Main = ViewEquipList;
+    break;
+  case 'EditEquipList':
+    Main = EditEquipList;
+    break;
+  case 'Maintance':
+    Main = Maintance;
+    break;
+  case 'ViewMaintance':
+    Main = ViewMaintance;
+    break;
+  case 'Notification':
+    Main = Notification;
+    break;
+  case 'Report':
+    Main = Report;
+    break;
+  case 'CreateAccount':
+    Main = CreateAccount;
+    break;
+  case 'UpdateAccount':
+    Main = UpdateAccount;
+    break;
+  case 'EditAccount':
+    Main = EditAccount;
+    break;
+  case 'QueryAccount':
+    Main = QueryAccount;
+    break;
+  case 'DeleteAccount':
+    Main = DeleteAccount;
+    break;
+  case 'Settings':
+    Main = Settings;
+    break;
+  default:
+    Main = NoMatch;
+}
+
 export const Root: React.SFC = React.memo(() => {
   return (
     <>
@@ -60,8 +151,7 @@ export const Root: React.SFC = React.memo(() => {
         <ThemeProvider theme={theme}>
           <Wrapper>
             <Banner />
-
-            <Switch>
+            {/* <Switch>
               <Redirect exact from="/" to="/createaccount" />
               <Route exact path="/" component={Home} />
               <Route path="/login" component={Login} />
@@ -96,8 +186,8 @@ export const Root: React.SFC = React.memo(() => {
               <Route path="/deleteaccount" component={DeleteAccount} />
               <Route path="/settings" component={Settings} />
               <Route component={NoMatch} />
-            </Switch>
-
+            </Switch> */}
+            <Main />
             <GlobalStyle />
           </Wrapper>
         </ThemeProvider>

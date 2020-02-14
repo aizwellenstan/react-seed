@@ -94,6 +94,17 @@ const OriginalLink = styled.a`
   }
 `;
 
+const handleLogin = () => {
+  localStorage.setItem('pageNow', 'Login');
+  window.location.reload();
+};
+
+const handleLogout = () => {
+  localStorage.removeItem('login');
+  localStorage.removeItem('pageNow');
+  window.location.reload();
+};
+
 export const Banner = React.memo(() => {
   // const { t } = useTranslation();
   if (localStorage.getItem('login') == 'true') {
@@ -139,17 +150,16 @@ export const Banner = React.memo(() => {
             rel="noreferrer"
           >
             {/* <FontAwesomeIcon icon={faExternalLinkSquareAlt} /> */}
-            <span>
-              {/* {t('banner.open_original', { defaultValue: 'Open Original' })} */}
-              <Link
-                to="/"
-                onClick={() => {
-                  localStorage.removeItem('login'), window.location.reload();
-                }}
-              >
-                <span style={{ color: 'white' }}>ログアウト</span>
-              </Link>
-            </span>
+            {/* {t('banner.open_original', { defaultValue: 'Open Original' })} */}
+            <Link
+              to="/"
+              onClick={() => {
+                handleLogout();
+              }}
+              style={{ textDecoration: 'none' }}
+            >
+              <span style={{ color: 'white' }}>ログアウト</span>
+            </Link>
           </OriginalLink>
         </Toolbox>
       </Wrapper>
@@ -197,12 +207,15 @@ export const Banner = React.memo(() => {
           rel="noreferrer"
         >
           {/* <FontAwesomeIcon icon={faExternalLinkSquareAlt} /> */}
-          <span>
-            {/* {t('banner.open_original', { defaultValue: 'Open Original' })} */}
-            <Link to="/login">
-              <span style={{ color: 'white' }}>ログイン</span>
-            </Link>
-          </span>
+          <Link
+            to="/"
+            onClick={() => {
+              handleLogin();
+            }}
+            style={{ textDecoration: 'none' }}
+          >
+            <span style={{ color: 'white' }}>ログイン</span>
+          </Link>
         </OriginalLink>
       </Toolbox>
     </Wrapper>

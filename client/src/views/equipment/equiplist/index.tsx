@@ -4,7 +4,7 @@ import { Page } from 'client/src/components/page';
 
 import { styled } from 'client/src/styles';
 import { sidebarWidth } from 'client/src/styles/constants';
-import { Redirect, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -85,7 +85,8 @@ export class EquipList extends React.Component<{}, MyState> {
 
   public render() {
     if (localStorage.getItem('login') !== 'true') {
-      return <Redirect exact from="/admin" to="/login" />;
+      localStorage.setItem('pageNow', 'Login');
+      window.location.reload();
     }
     return (
       <Page>

@@ -5,7 +5,6 @@ import { Page } from 'client/src/components/page';
 
 import { styled } from 'client/src/styles';
 import { sidebarWidth } from 'client/src/styles/constants';
-import { Redirect } from 'react-router-dom';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -26,12 +25,12 @@ const Wrapper = styled.div`
 
 export const Settings = React.memo(() => {
   if (localStorage.getItem('login') !== 'true') {
-    return <Redirect exact from="/admin" to="/login" />;
+    localStorage.setItem('pageNow', 'Login');
+    window.location.reload();
   }
   return (
     <Page>
       <SidebarContainer />
-      {/* <TimetableContainer /> */}
       <Wrapper>Comming Soon</Wrapper>
     </Page>
   );

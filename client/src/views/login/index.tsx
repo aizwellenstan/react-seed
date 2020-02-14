@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Redirect } from 'react-router-dom';
 import { Page } from 'client/src/components/page';
 import { Helmet } from 'react-helmet';
 import { styled } from 'client/src/styles';
@@ -27,7 +26,7 @@ export class Login extends React.Component<{}, MyState> {
 
   private doLogin = () => {
     // const uri = 'railsapi';
-    const uri = 'https://product.nadi3docms.com/api'
+    const uri = 'https://product.nadi3docms.com/api';
     const userName = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     if (userName !== '' && password !== '') {
@@ -67,7 +66,7 @@ export class Login extends React.Component<{}, MyState> {
               localStorage.setItem('group', res.data.AccountInfo.Group);
             }
             setTimeout(() => {
-              window.history.pushState(null, '', '');
+              localStorage.setItem('pageNow', 'CreateCold');
               window.location.reload();
             }, 1000);
           }
@@ -79,7 +78,8 @@ export class Login extends React.Component<{}, MyState> {
 
   public render() {
     if (localStorage.getItem('login') == 'true') {
-      return <Redirect exact from="/login" to="/" />;
+      localStorage.setItem('pageNow', 'CreateCold');
+      window.location.reload();
     }
     if (this.state.loading) {
       return (
@@ -121,6 +121,11 @@ export class Login extends React.Component<{}, MyState> {
                   id="password"
                   placeholder="password"
                   required
+                  onKeyPress={event => {
+                    if (event.key === 'Enter') {
+                      this.doLogin();
+                    }
+                  }}
                 />
                 {/* <div id="remember" className="checkbox">
                     <label>

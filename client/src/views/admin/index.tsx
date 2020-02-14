@@ -3,11 +3,12 @@ import * as React from 'react';
 import { SidebarContainer } from 'client/src/containers/sidebar-container';
 import { Page } from 'client/src/components/page';
 
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 
 export const Admin = React.memo(() => {
   if (localStorage.getItem('login') !== 'true') {
-    return <Redirect exact from="/admin" to="/login" />;
+    localStorage.setItem('pageNow', 'Login');
+    window.location.reload();
   }
   return (
     <Page>

@@ -4,7 +4,6 @@ import { Page } from 'client/src/components/page';
 
 import { styled } from 'client/src/styles';
 import { sidebarWidth } from 'client/src/styles/constants';
-import { Redirect } from 'react-router-dom';
 import { VueWrapper } from 'vuera';
 import MyVueComponent from './components/MyVueComponent.vue';
 
@@ -26,7 +25,8 @@ const Wrapper = styled.div`
 
 export const QueryCold = React.memo(() => {
   if (localStorage.getItem('login') !== 'true') {
-    return <Redirect exact from="/admin" to="/login" />;
+    localStorage.setItem('pageNow', 'Login');
+    window.location.reload();
   }
   return (
     <Page>
