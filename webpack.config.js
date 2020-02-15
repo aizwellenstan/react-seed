@@ -101,7 +101,7 @@ const config = (isProd, isDevServer) => ({
       ServiceWorker: {
         output: 'sw.js',
         publicPath: '/sw.js',
-        cacheName: 'refined-itsukara-link',
+        cacheName: '',
         minify: true,
       },
     }),
@@ -115,7 +115,7 @@ const config = (isProd, isDevServer) => ({
     new HtmlWebpackHarddiskPlugin(),
 
     new WebpackNotifierPlugin({
-      title: 'Refined itsukara.link',
+      title: '',
       alwaysNotify: true,
     }),
 
@@ -134,7 +134,7 @@ const config = (isProd, isDevServer) => ({
     index: 'index.html',
     inline: true,
     open: true,
-    port: 8080,
+    port: 7005,
     stats: 'errors-only',
     watchOptions: {
       ignored: /node_modules/,
@@ -143,7 +143,7 @@ const config = (isProd, isDevServer) => ({
       {
         // Proxy everything but index.html (/)
         context: ['**', '!/'],
-        target: 'http://localhost:3000',
+        target: 'http://localhost:7006',
       },
     ],
   },
