@@ -111,7 +111,7 @@ export default {
         });
     },
     handleclick(id) {
-      window.history.replaceState(null, '', `editaccount?id=${id}`);
+      localStorage.setItem('pageNow', 'EditAccount');
       window.location.reload();
     },
   },

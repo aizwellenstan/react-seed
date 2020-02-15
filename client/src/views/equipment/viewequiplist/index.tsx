@@ -81,6 +81,11 @@ export class ViewEquipList extends React.Component<{}, MyState> {
     };
   }
 
+  private handleClick() {
+    localStorage.setItem('pageNow', 'EquipList');
+    window.location.reload();
+  }
+
   public render() {
     if (localStorage.getItem('login') !== 'true') {
       localStorage.setItem('pageNow', 'Login');
@@ -163,6 +168,14 @@ export class ViewEquipList extends React.Component<{}, MyState> {
               </table>
             </div>
           </div>
+          <button
+            onClick={() => {
+              this.handleClick();
+            }}
+            className="btn btn-primary"
+          >
+            Back
+          </button>
         </Wrapper>
       </Page>
     );

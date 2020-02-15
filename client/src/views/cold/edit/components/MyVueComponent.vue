@@ -420,9 +420,10 @@ export default {
     // var pageURL = window.location.href;
     // var lastURLSegment = pageURL.substr(pageURL.lastIndexOf('/') + 1);
     // this.id = lastURLSegment;
-    var url = window.location.search;
-    url = url.replace('?id=', ''); // remove the ?
-    this.id = url;
+    // var url = window.location.search;
+    // url = url.replace('?id=', ''); // remove the ?
+    // this.id = url;
+    this.id=localStorage.getItem('id')
   },
   mounted() {
     console.log(QUERY_URL + this.id);
@@ -470,7 +471,7 @@ export default {
           setTimeout(() => {
             this.signingUp = false;
             this.successMessage = 'success';
-            window.history.replaceState(null, '', 'updatecold');
+            localStorage.setItem('pageNow', 'UpdateCold');
             window.location.reload();
           }, 1000);
         })

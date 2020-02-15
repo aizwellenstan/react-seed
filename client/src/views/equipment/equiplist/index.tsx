@@ -4,7 +4,6 @@ import { Page } from 'client/src/components/page';
 
 import { styled } from 'client/src/styles';
 import { sidebarWidth } from 'client/src/styles/constants';
-import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -83,6 +82,16 @@ export class EquipList extends React.Component<{}, MyState> {
     };
   }
 
+  private handleViewMore() {
+    localStorage.setItem('pageNow', 'ViewEquipList');
+    window.location.reload();
+  }
+
+  private handleEdit() {
+    localStorage.setItem('pageNow', 'EditEquipList');
+    window.location.reload();
+  }
+
   public render() {
     if (localStorage.getItem('login') !== 'true') {
       localStorage.setItem('pageNow', 'Login');
@@ -125,16 +134,24 @@ export class EquipList extends React.Component<{}, MyState> {
                           <td>{i.NextMaintenanceDate}</td>
                           <td>{i.Department}</td>
                           <td>
-                            <Link to="/viewequiplist">
-                              <button className="btn btn-success">
-                                View More
-                              </button>
-                            </Link>
+                            <button
+                              onClick={() => {
+                                this.handleViewMore();
+                              }}
+                              className="btn btn-success"
+                            >
+                              View More
+                            </button>
                           </td>
                           <td>
-                            <Link to="/editequiplist">
-                              <button className="btn btn-warning">Edit</button>
-                            </Link>
+                            <button
+                              onClick={() => {
+                                this.handleEdit();
+                              }}
+                              className="btn btn-warning"
+                            >
+                              Edit
+                            </button>
                           </td>
                         </tr>
                       ))}

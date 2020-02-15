@@ -64,7 +64,8 @@ export default {
   },
   methods: {
     handleclick(id) {
-      window.history.replaceState(null, '', `editcold?id=${id}`);
+      localStorage.setItem('id', id);
+      localStorage.setItem('pageNow', 'EditCold');
       window.location.reload();
     },
   },

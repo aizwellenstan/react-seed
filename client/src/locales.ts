@@ -7,6 +7,8 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import en from 'client/locales/en/translation.json';
 import ja from 'client/locales/ja/translation.json';
 
+import zh from 'client/locales/zh/translation.json';
+
 export function normalizeLanguageForDayjs(lng: string) {
   return [
     'de-at',
@@ -43,6 +45,8 @@ export const getLocale = () => {
     resources: {
       en: { translation: en },
       ja: { translation: ja },
+
+      zh: { translation: zh },
     },
     ns: ['translation'],
     defaultNS: 'translation',

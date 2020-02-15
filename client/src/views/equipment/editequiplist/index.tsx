@@ -4,7 +4,6 @@ import { Page } from 'client/src/components/page';
 
 import { styled } from 'client/src/styles';
 import { sidebarWidth } from 'client/src/styles/constants';
-import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -80,6 +79,11 @@ export class EditEquipList extends React.Component<{}, MyState> {
         },
       ],
     };
+  }
+
+  private handleCancel() {
+    localStorage.setItem('pageNow', 'EquipList');
+    window.location.reload();
   }
 
   public render() {
@@ -278,13 +282,23 @@ export class EditEquipList extends React.Component<{}, MyState> {
                   </div>
                 </div>
                 <div>
-                  <button type="submit" className="btn btn-primary">
+                  <button
+                    onClick={() => {
+                      this.handleCancel();
+                    }}
+                    className="btn btn-primary"
+                  >
                     Submit
                   </button>
                   &nbsp;&nbsp;
-                  <Link to="/equiplist">
-                    <button className="btn btn-secondary">Cancel</button>
-                  </Link>
+                  <button
+                    onClick={() => {
+                      this.handleCancel();
+                    }}
+                    className="btn btn-secondary"
+                  >
+                    Cancel
+                  </button>
                 </div>
               </form>
             </div>

@@ -220,7 +220,7 @@ export const Banner = React.memo(() => {
           >
             <span style={{ color: 'white' }}>
               {t(`banner.login`, {
-                defaultValue: 'ログイン',
+                defaultValue: 'Login',
               })}
             </span>
           </Link>
