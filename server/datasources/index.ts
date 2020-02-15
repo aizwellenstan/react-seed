@@ -13,21 +13,19 @@ const router = express.Router();
 //   req.pipe(request(boundPath)).pipe(res);
 // });
 
-// router.use('/assetapi', async (req, res) => {
-//   // const boundPath: string = `${RESOURCE_PROTOCOL}://${RESOURCE_HOST}${req.path}`;
-//   // const boundPath: string = `https://api.github.com${req.path}`
-//   var query = ''
-//   for (let key in req.query) {
-//     query += `${key}=${req.query[key]}&`
-//   }
-//   const boundPath: string = `http://127.0.0.1:7004${req.path}?${query}`
-//   const response = await fetch(boundPath, {
-//     headers: {
-//       username: `${req.header('username')}`
-//     }
-//   })
-//   const json = await response.json()
-//   res.json(json)
-// });
+router.use('/assets', async (req, res) => {
+  // const boundPath: string = `${RESOURCE_PROTOCOL}://${RESOURCE_HOST}${req.path}`;
+  // const boundPath: string = `https://api.github.com${req.path}`
+  var query = '';
+  for (let key in req.query) {
+    query += `${key}=${req.query[key]}&`;
+  }
+  const boundPath: string = `http://product.nadi3docms.com/nadidemo3/assets${
+    req.path
+  }?${query}`;
+  const response = await fetch(boundPath);
+  const json = await response.json();
+  res.json(json);
+});
 
 export const dataSources = router;

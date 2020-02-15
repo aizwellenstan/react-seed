@@ -23,47 +23,18 @@ export const Home = React.memo(() => {
     localStorage.setItem('pageNow', 'CreateCold');
     window.location.reload();
   }
-
   return (
     <>
       <Helmet>
-        <script
-          type="text/javascript"
-          src="https://product.nadi3docms.com/nadidemo3/assets/js/jquery-3.2.1.min.js"
-        />
-        <script
-          type="text/javascript"
-          src="https://product.nadi3docms.com/nadidemo3/assets/js/bootstrap.min.js"
-        />
-        <script
-          type="text/javascript"
-          src="https://product.nadi3docms.com/nadidemo3/assets/js/jquery.marquee.min.js"
-        />
-        <script
-          type="text/javascript"
-          src="https://product.nadi3docms.com/nadidemo3/assets/js/owl.carousel.min.js"
-        />
-        <script
-          type="text/javascript"
-          src="https://product.nadi3docms.com/nadidemo3/assets/js/main.js"
-          defer
-        />
-        <link
-          rel="stylesheet"
-          href="https://product.nadi3docms.com/nadidemo3/assets/css/font-awesome.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://product.nadi3docms.com/nadidemo3/assets/css/owl.carousel.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://product.nadi3docms.com/nadidemo3/assets/css/style.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://product.nadi3docms.com/nadidemo3/assets/css/animate.css"
-        />
+        <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js" />
+        <script type="text/javascript" src="/assets/js/bootstrap.min.js" />
+        <script type="text/javascript" src="/assets/js/jquery.marquee.min.js" />
+        <script type="text/javascript" src="/assets/js/owl.carousel.min.js" />
+        <script type="text/javascript" src="/assets/js/main.js" defer />
+        <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="/assets/css/owl.carousel.css" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/animate.css" />
       </Helmet>
       <Page>
         <Wrapper>
