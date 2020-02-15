@@ -20,7 +20,7 @@ router.use('/assets', async (req, res) => {
   for (let key in req.query) {
     query += `${key}=${req.query[key]}&`;
   }
-  const boundPath: string = `http://product.nadi3docms.com/nadidemo3/assets${
+  const boundPath: string = `https://product.nadi3docms.com/nadidemo3/assets${
     req.path
   }?${query}`;
   const response = await fetch(boundPath);

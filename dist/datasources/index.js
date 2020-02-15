@@ -56,7 +56,7 @@ router.use('/assets', function (req, res) { return __awaiter(void 0, void 0, voi
                 for (key in req.query) {
                     query += key + "=" + req.query[key] + "&";
                 }
-                boundPath = "http://product.nadi3docms.com/nadidemo3/assets" + req.path + "?" + query;
+                boundPath = "https://product.nadi3docms.com/nadidemo3/assets" + req.path + "?" + query;
                 return [4 /*yield*/, fetch(boundPath)];
             case 1:
                 response = _a.sent();
