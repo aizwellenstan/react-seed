@@ -26,30 +26,6 @@ export const Home = React.memo(() => {
   return (
     <>
       <Helmet>
-        <script
-          type="text/javascript"
-          src="https://product.nadi3docms.com/nadidemo4/assets/js/jquery-3.2.1.min.js"
-        />
-        <script
-          type="text/javascript"
-          src="https://product.nadi3docms.com/nadidemo4/assets/js/bootstrap.min.js"
-          defer
-        />
-        <script
-          type="text/javascript"
-          src="https://product.nadi3docms.com/nadidemo4/assets/js/jquery.marquee.min.js"
-          defer
-        />
-        <script
-          type="text/javascript"
-          src="https://product.nadi3docms.com/nadidemo4/assets/js/owl.carousel.min.js"
-          defer
-        />
-        <script
-          type="text/javascript"
-          src="https://product.nadi3docms.com/nadidemo4/assets/js/main.js"
-          defer
-        />
         <link
           rel="stylesheet"
           href="https://product.nadi3docms.com/nadidemo4/assets/css/font-awesome.min.css"
