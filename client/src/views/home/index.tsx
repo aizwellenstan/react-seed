@@ -33,14 +33,17 @@ export const Home = React.memo(() => {
         <script
           type="text/javascript"
           src="https://product.nadi3docms.com/nadidemo4/assets/js/bootstrap.min.js"
+          defer
         />
         <script
           type="text/javascript"
           src="https://product.nadi3docms.com/nadidemo4/assets/js/jquery.marquee.min.js"
+          defer
         />
         <script
           type="text/javascript"
           src="https://product.nadi3docms.com/nadidemo4/assets/js/owl.carousel.min.js"
+          defer
         />
         <script
           type="text/javascript"
