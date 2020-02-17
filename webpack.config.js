@@ -134,7 +134,7 @@ const config = (isProd, isDevServer) => ({
     index: 'index.html',
     inline: true,
     open: true,
-    port: 7005,
+    port: 7006,
     stats: 'errors-only',
     watchOptions: {
       ignored: /node_modules/,
@@ -143,7 +143,7 @@ const config = (isProd, isDevServer) => ({
       {
         // Proxy everything but index.html (/)
         context: ['**', '!/'],
-        target: 'http://localhost:7006',
+        target: 'http://localhost:7005',
       },
     ],
   },
