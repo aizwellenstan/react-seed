@@ -28,40 +28,40 @@ export const Home = React.memo(() => {
       <Helmet>
         <script
           type="text/javascript"
-          src="https://product.nadi3docms.com/nadidemo3/assets/js/jquery-3.2.1.min.js"
+          src="https://product.nadi3docms.com/nadidemo4/assets/js/jquery-3.2.1.min.js"
         />
         <script
           type="text/javascript"
-          src="https://product.nadi3docms.com/nadidemo3/assets/js/bootstrap.min.js"
+          src="https://product.nadi3docms.com/nadidemo4/assets/js/bootstrap.min.js"
         />
         <script
           type="text/javascript"
-          src="https://product.nadi3docms.com/nadidemo3/assets/js/jquery.marquee.min.js"
+          src="https://product.nadi3docms.com/nadidemo4/assets/js/jquery.marquee.min.js"
         />
         <script
           type="text/javascript"
-          src="https://product.nadi3docms.com/nadidemo3/assets/js/owl.carousel.min.js"
+          src="https://product.nadi3docms.com/nadidemo4/assets/js/owl.carousel.min.js"
         />
         <script
           type="text/javascript"
-          src="https://product.nadi3docms.com/nadidemo3/assets/js/main.js"
+          src="https://product.nadi3docms.com/nadidemo4/assets/js/main.js"
           defer
         />
         <link
           rel="stylesheet"
-          href="https://product.nadi3docms.com/nadidemo3/assets/css/font-awesome.min.css"
+          href="https://product.nadi3docms.com/nadidemo4/assets/css/font-awesome.min.css"
         />
         <link
           rel="stylesheet"
-          href="https://product.nadi3docms.com/nadidemo3/assets/css/owl.carousel.css"
+          href="https://product.nadi3docms.com/nadidemo4/assets/css/owl.carousel.css"
         />
         <link
           rel="stylesheet"
-          href="https://product.nadi3docms.com/nadidemo3/assets/css/style.css"
+          href="https://product.nadi3docms.com/nadidemo4/assets/css/style.css"
         />
         <link
           rel="stylesheet"
-          href="https://product.nadi3docms.com/nadidemo3/assets/css/animate.css"
+          href="https://product.nadi3docms.com/nadidemo4/assets/css/animate.css"
         />
       </Helmet>
       <Page>
