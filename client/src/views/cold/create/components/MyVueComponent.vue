@@ -30,7 +30,7 @@
 <script>
 import UploadExcelComponent from './UploadExcel/index.vue';
 import VueScrollingTable from 'vue-scrolling-table';
-const railsApi = 'https://product.nadi3docms.com/api';
+const railsApi = 'https://product.nadi3docms.com/api/v1.2';
 // const railsApi = 'railsapi';
 const CompanyId = localStorage.getItem('CompanyId');
 const ProductId = localStorage.getItem('ProductId');
@@ -88,7 +88,7 @@ export default {
       this.errorMessage = '';
       this.successMessage = '';
       this.signingUp = true;
-      for (var i = 0; i < this.tableData.length; i++) {
+      // for (var i = 0; i < this.tableData.length; i++) {
         fetch(REGISTER_URL, {
           method: 'post',
           headers: {
@@ -96,7 +96,7 @@ export default {
             Accept: 'application/json',
             token: localStorage.getItem('token'),
           },
-          body: JSON.stringify(this.tableData[i]),
+          body: JSON.stringify(this.tableData),
         })
           .then(res => res.json())
           .then(parsedResponse => {
@@ -108,7 +108,7 @@ export default {
               this.signingUp = false;
             }, 1000);
           });
-      }
+      // }
       this.tableData = '';
       this.tableHeader = '';
     },
