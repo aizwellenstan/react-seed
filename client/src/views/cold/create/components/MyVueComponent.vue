@@ -2,7 +2,6 @@
   <div class="app-container">
     <h3>創造靜態資料 匯入csv檔</h3>
     <upload-excel-component :on-success="handleSuccess" :before-upload="beforeUpload" />
-    <button @click="handleDebug" class="btn btn-primary">Submit</button>
     <button @click="handleSubmit" class="btn btn-primary">Submit</button>
     <div style=" overflow-y: scroll;">
       <vue-scrolling-table
