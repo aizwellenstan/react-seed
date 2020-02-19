@@ -51,6 +51,7 @@ export class Login extends React.Component<{}, MyState> {
         .then(res => {
           if (res.status === 401) {
             alert('ユーザ名かパスワードが間違っています');
+            this.setState({ loading: false });
           } else {
             if (res.data.AccountInfo.token) {
               localStorage.setItem('login', 'true');
