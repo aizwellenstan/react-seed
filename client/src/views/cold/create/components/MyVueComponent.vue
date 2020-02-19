@@ -30,12 +30,12 @@
 <script>
 import UploadExcelComponent from './UploadExcel/index.vue';
 import VueScrollingTable from 'vue-scrolling-table';
-const railsApi = 'https://product.nadi3docms.com/api';
+// const railsApi = 'https://product.nadi3docms.com/api';
 // const railsApi = 'railsapi';
 const CompanyId = localStorage.getItem('CompanyId');
 const ProductId = localStorage.getItem('ProductId');
 const ProjectId = localStorage.getItem('ProjectId');
-const REGISTER_URL = railsApi+`/${railsApi}/${CompanyId}/${ProductId}/${ProjectId}/colddata`;
+const REGISTER_URL = `/${railsApi}/${CompanyId}/${ProductId}/${ProjectId}/colddata`;
 
 export default {
   name: 'UploadExcel',
